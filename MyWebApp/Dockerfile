@@ -1,4 +1,6 @@
 FROM tomcat
-COPY ./target/*.war /usr/local/tomcat/webapps/app
+WORKDIR /usr/local/tomcat/webapps.dist
+RUN mv ./* ../webapps
+COPY ./target/*.war /usr/local/tomcat/webapps/app.war
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
