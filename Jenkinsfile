@@ -15,7 +15,7 @@ pipeline {
                         sh "git config --global user.email 'sharmaaatish552@gmail.com'"
                         sh "git add . " 
                         sh "git commit -m 'lol' "
-                        sh "git push "
+                        sh "git push origin * "
                     }
                 }
             }
