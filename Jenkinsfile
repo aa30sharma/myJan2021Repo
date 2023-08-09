@@ -15,7 +15,7 @@ pipeline {
                         sh "git config --global user.email 'sharmaaatish552@gmail.com'"
                         sh "git tag -a ${TAG_NAME} -m 'lol' "
                         sh "git branch"
-                        sh "git push "
+                        sh "git push origin main"
                     }
                 }
             }
