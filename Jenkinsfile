@@ -10,7 +10,9 @@ pipeline {
         stage('Push Tag') {
             steps {
                 script {
-                    withCredentials([string(credentialsId: 'github-http-tokan', variable: 'GITHUB_TOKEN')]) {
+                   withCredentials([usernameColonPassword(credentialsId: 'gitCred', variable: 'GITHUB_TOKEN')]) {
+                        sh "git config --global user.name 'aa30sharma'"
+                        sh "git config --global user.email 'sharmaaatish552@gmail.com'"
                         sh "git tag ${TAG_NAME}"
                         sh "git push --tags "
                     }
