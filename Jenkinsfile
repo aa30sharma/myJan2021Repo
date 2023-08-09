@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        TAG_NAME = 'v1.29'  // Replace with your desired tag name
+        TAG_NAME = 'v2'  // Replace with your desired tag name
     }
 
     stages {
