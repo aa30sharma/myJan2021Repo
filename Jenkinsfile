@@ -11,8 +11,10 @@ pipeline {
             steps {
                 script {
                    withCredentials([usernameColonPassword(credentialsId: 'gitCred', variable: 'GITHUB_TOKEN')]) {
+                       
                         sh "git config --global user.name 'aa30sharma'"
                         sh "git config --global user.email 'sharmaaatish552@gmail.com'"
+                        sh "ls"
                         sh "git add . " 
                         sh "git commit -m 'lol' "
                         sh "git push origin main "
